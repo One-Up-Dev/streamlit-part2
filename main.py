@@ -54,7 +54,6 @@ with st.container(border=True):
                 "Quel graphique veux-tu utiliser?",
                 (graph_list)
         )
-
         if choix_graph == 'line_chart':
                 st.line_chart(df.dropna(), x = col_x, y = col_y)
         elif choix_graph == 'bar_chart':
@@ -73,3 +72,8 @@ if agree:
         plt.figure(figsize=(10, 8))
         sns.heatmap(df1.select_dtypes('number').corr(), annot=True, cmap='coolwarm')
         st.pyplot(plt)
+
+# ==========================================================================================
+# LIEN VERS LE CODE SOURCE
+# ==========================================================================================
+st.page_link("https://github.com/One-Up-Dev/streamlit-part2", label="Code Source", icon=":material/code_blocks:")
